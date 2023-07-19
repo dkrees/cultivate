@@ -1,9 +1,8 @@
 'use client'
 export default function Home() {
 
-  const submitForm = (event) => {
+  const submitForm = (event: React.FormEvent) => {
     event.preventDefault();
-    alert('Logged in')
   }
 
   return (
