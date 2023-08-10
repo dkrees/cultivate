@@ -7,14 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      // Extend colors with custom a color palette.
+      // By default these colors will be made available everywhere in the framework like text color, border color and background color
+      colors: {
+        'primary': '#2BB3BB',
+        'secondary': '#EF8547',
+        'accent': '#C41565',
+      }
     },
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('autoprefixer'),
   ],
 }
