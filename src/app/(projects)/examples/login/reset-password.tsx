@@ -5,7 +5,6 @@ import * as Dialog from "@radix-ui/react-dialog";
 import * as Form from "@radix-ui/react-form";
 import { Cross1Icon } from "@radix-ui/react-icons";
 import { FormEvent, useState } from "react";
-import { responseDelay } from "./page";
 import Spinner from "@/app/components/Spinner";
 
 interface Props {
@@ -20,7 +19,7 @@ const ResetPassword = ({ email, className }: Props) => {
 
   const handleReset = (e: FormEvent<HTMLFormElement>) => {
     setLoading(true);
-    responseDelay(1000).then(() => {
+    new Promise((resolve) => setTimeout(resolve, 2000)).then(() => {
       setOpen(false);
       setLoading(false);
     });

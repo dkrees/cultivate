@@ -3,7 +3,6 @@ import * as Dialog from "@radix-ui/react-dialog";
 import * as Form from "@radix-ui/react-form";
 import { Cross1Icon } from "@radix-ui/react-icons";
 import { FormEvent, useState } from "react";
-import { responseDelay } from "./page";
 
 interface Props {
   triggerClassName?: string;
@@ -48,7 +47,7 @@ const NewAccountForm = ({ didSave }: { didSave: () => void }) => {
     event.preventDefault();
     event.stopPropagation();
     setLoading(true);
-    responseDelay(2000).then(() => didSave());
+    new Promise((resolve) => setTimeout(resolve, 2000)).then(() => didSave());
   };
 
   return (

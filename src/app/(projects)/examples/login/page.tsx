@@ -8,10 +8,6 @@ import ResetPassword from "./reset-password";
 import Spinner from "@/app/components/Spinner";
 import CreateAccount from "./create-account";
 
-// DUMMY RESPONSE DELAY
-export const responseDelay = (ms: number = 2000) =>
-  new Promise((resolve) => setTimeout(resolve, ms));
-
 export default function LoginPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -20,7 +16,9 @@ export default function LoginPage() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setLoading(true);
-    responseDelay().then(() => router.push("/cultivate"));
+    new Promise((resolve) => setTimeout(resolve, 2000)).then(() =>
+      router.push("/cultivate"),
+    );
   };
 
   return (
