@@ -105,7 +105,7 @@ export default function ListPageExample() {
                 id="title"
                 name="title"
                 value={formData.title}
-                onChange={handleInputChange}
+                onChange={(e) => handleInputChange}
                 required
               />
             </div>
