@@ -36,13 +36,13 @@ export default function CultivatePage() {
       path: "examples/table",
       description: "An example of a simple table.",
     },
-    {
-      id: id++,
-      name: "Kimble Leave Planner",
-      path: "kimble/leave-planner",
-      description:
-        "A Kimble Leave Planner mockup for solving growing number of filters.",
-    },
+    // {
+    //   id: id++,
+    //   name: "Kimble Leave Planner",
+    //   path: "kimble/leave-planner",
+    //   description:
+    //     "A Kimble Leave Planner mockup for solving growing number of filters.",
+    // },
     {
       id: id++,
       name: "Simple Login Demo",
