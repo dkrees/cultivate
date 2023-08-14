@@ -1,35 +1,25 @@
 export default function RootPage() {
   return (
-    <div className="min-h-screen bg-blue-600 py-6">
-      <div className="container mx-auto rounded-md bg-white p-6">
-        <h1 className="mb-4 text-2xl">Sign In</h1>
-        <div className="mb-4 flex flex-col gap-1">
-          <label htmlFor="email" className="text-gray-600">
-            Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            className="rounded-md border-gray-400"
-            placeholder="you@exmple.com"
-          />
-        </div>
-        <div className="flex flex-col gap-1">
-          <label htmlFor="password" className="text-gray-600">
-            Password
-          </label>
-          <input
-            id="password"
-            type="password"
-            className="rounded-md border-gray-400"
-            placeholder="*****"
-          />
-        </div>
-        <div className="mt-2 flex justify-end">
-          <button className="rounded-md bg-blue-400 px-3 py-2 text-white hover:bg-blue-600 active:translate-y-0.5 active:bg-blue-700">
-            Sign in
-          </button>
-        </div>
+    <div className="flex min-h-screen flex-col bg-gradient-to-br from-sky-800 from-10% to-emerald-500 to-90%">
+      <div className="container mx-auto mt-24 flex max-w-sm flex-col gap-6 rounded-lg border-2 border-emerald-600 bg-white p-6 text-center font-light">
+        <h1 className="text-4xl ">Nothing to see here.</h1>
+        <p className="text-lg text-gray-700">
+          A blank canvas for designing and building high fidelity prototypes.
+        </p>
+        <p>
+          Edit the{" "}
+          <code className="rounded-md bg-gray-200 px-2 py-1">
+            src/app/page.tsx
+          </code>{" "}
+          to get started.
+        </p>
+        <p className="text-sm">
+          Or visit the{" "}
+          <a className="text-sky-600 underline" href="/cultivate">
+            Cultivate
+          </a>{" "}
+          page for more information and project pages.
+        </p>
       </div>
     </div>
   );
