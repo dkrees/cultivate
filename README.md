@@ -40,7 +40,7 @@ Designing in code instead of the usual design tools, such as Figma, Sketch, Adob
 
 The Cultivate app is built on the Next.js system, extending the React UI library and supported by a utility-first CSS framework - TailwindCSS. Additionally, a headless (unstyled) component library - Radix UI Primitives, provide reusable components such as dropdowns, modals, and popovers.
 
-The Cultivate template provides an [unopinionated](#unopinionated) skeleton application enabling designers and developers to quickly run a local pre-configured application for designing and building user interfaces.
+The Cultivate template provides an skeleton application enabling designers and developers to quickly run a local pre-configured application for designing and building user interfaces.
 
 For more information, check out the technology documentation:
 
