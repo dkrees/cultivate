@@ -32,17 +32,10 @@ export default function CultivatePage() {
     },
     {
       id: id++,
-      name: "A Table",
-      path: "examples/table",
-      description: "An example of a simple table.",
+      name: "A Table with routing to detail page",
+      path: "examples/table-detail-routing",
+      description: "An example of table with routing to a detail page.",
     },
-    // {
-    //   id: id++,
-    //   name: "Kimble Leave Planner",
-    //   path: "kimble/leave-planner",
-    //   description:
-    //     "A Kimble Leave Planner mockup for solving growing number of filters.",
-    // },
     {
       id: id++,
       name: "Simple Login Demo",
@@ -69,8 +62,8 @@ export default function CultivatePage() {
   return (
     <>
       <h1 className="mb-3 text-3xl">🚀 Cultivate</h1>
-      <h2 className="mb-2 text-2xl">Project Pages</h2>
-      <p>A collection of projects and examples.</p>
+      <h2 className="mb-2 text-2xl">Examples</h2>
+      <p>A collection of examples:</p>
 
       <div className="mt-4 grid grid-cols-3 gap-3">
         {projects.map((project) => (

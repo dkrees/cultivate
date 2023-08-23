@@ -16,17 +16,8 @@ import {
   Dialog,
   TextField,
 } from "@radix-ui/themes";
-import { Employees } from "@/app/data/employees";
+import { EmployeeType, Employees } from "@/app/data/employees";
 import { useState } from "react";
-
-type Employee = {
-  employeeID: number;
-  employeeName: string;
-  title: string;
-  city: string;
-  country: string;
-  reportsTo: number;
-};
 
 const ThemePage = () => {
   const [employees, setEmployees] = useState(Employees);
@@ -48,7 +39,7 @@ const ThemePage = () => {
               <DownloadIcon /> Export
             </Button>
             <AddEmployeeDialog
-              didSave={(newEmployee: Employee) =>
+              didSave={(newEmployee: EmployeeType) =>
                 setEmployees([...employees, newEmployee])
               }
             />
@@ -120,7 +111,7 @@ const ThemePage = () => {
 const AddEmployeeDialog = ({
   didSave,
 }: {
-  didSave: (employee: Employee) => void;
+  didSave: (employee: EmployeeType) => void;
 }) => {
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
@@ -129,12 +120,12 @@ const AddEmployeeDialog = ({
 
   const handleSave = () => {
     let newEmployee = {
-      employeeID: 0,
+      employeeID: "0",
       employeeName: name,
       title: role,
       city: city,
       country: country,
-      reportsTo: 0,
+      reportsTo: "0",
     };
     didSave(newEmployee);
   };
